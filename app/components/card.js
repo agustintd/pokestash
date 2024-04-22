@@ -19,10 +19,9 @@ export default function Card() {
                     console.log(null);
                 }
                 const { name, images, cardmarket } = card;
-                const averageSellPrice = cardmarket?.prices?.trendPrice || "???";
+                const trendPrice = cardmarket?.prices?.trendPrice || "???";
                 const { small } = images;
-                setCardinfo([name, small, averageSellPrice, randomId]);
-                return "a   ";
+                setCardinfo([name, small, trendPrice, randomId]);
             })
     }
     
