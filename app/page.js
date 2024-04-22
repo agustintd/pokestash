@@ -1,14 +1,13 @@
-import CardGroup from "@/app/components/cardgroup";
-import Card from "@/app/components/card";
+import Nav from "@/app/components/nav";
+import Footer from "@/app/components/footer";
+import Body from "@/app/components/body";
 
-export default function Home() { 
+export default function Home({ children }) {
     return (
         <main className="flex min-h-screen bg-red flex-col items-center justify-center  bg-gray-300 ">
-            <CardGroup>
-              <Card/>
-              <Card/>
-              <Card/>
-            </CardGroup>
+            <Nav></Nav>
+            <Body>{children}</Body>
+            <Footer></Footer>
         </main>
     );
 }
