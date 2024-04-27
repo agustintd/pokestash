@@ -1,22 +1,7 @@
-import CardGroup from "@/app/components/cardgroup";
-import Card from "@/app/components/card";
-export default function Body() {
+export default function Body({ children }) {
     return (
-        <div className='bg-red-300 h-[100%] min-h-[200px] mt-0 mb-auto w-[60%] min-w-[500px] max-w-[1500px]'>
-            <CardGroup>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-            </CardGroup>
+        <div className='s2color h-[100%] min-h-[200px] mt-5 mb-auto w-[60%] min-w-[500px] max-w-[1500px]'>
+            { children }
         </div>
     );
 }
