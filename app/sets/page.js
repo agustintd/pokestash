@@ -2,7 +2,7 @@ import Nav from "@/app/components/nav";
 import Footer from "@/app/components/footer";
 import Body from "@/app/components/body";
 import CardGroup from "@/app/components/cardgroup";
-import Sets from "@/app/sets/sets";
+import Sets from "@/app/components/sets";
 
 export default function Home({ children }) {
     return (

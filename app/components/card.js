@@ -1,15 +1,16 @@
 "use client"
-//import { pokeids } from './pokeids';
+import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
 import CardSkeleton from './cardskeleton';
 export default function Card() {
     const [imgLoaded, setImgLoaded] = useState(false);
-    const pokeids = ["hgss4-1", "xy5-1"];
+    const [urlRaiz, setUrlRaiz] = useState('');
+    const [idUnico, setIdUnico] = useState('');
+    //const pokeids = ["hgss4-1", "xy5-1"];
     const [cardinfo, setCardinfo] = useState(["none","none","none", "none"]);
+    const [displayValue, setDisplayValue] = useState("block");
     const randomIndex = Math.floor(Math.random() * pokeids.length);
     const randomId = pokeids[randomIndex]; 
-    const idUnico = 1;
-    let displayValue = "block"
     function generarIdUnico() {
         let cardId = localStorage.getItem('cardId');
         if (!cardId) {
@@ -23,7 +24,7 @@ export default function Card() {
     
 
     function getRandomCardData() {
-        fetch("http://localhost:3000/cards.json")
+        fetch(urlRaiz+"/pokemon/cards.json")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -43,11 +44,13 @@ export default function Card() {
     }
 
     function handleImageLoaded(){
-        displayValue = "none"
+        setDisplayValue("none");
         document.getElementById(idUnico).removeAttribute('style');
     }
 
     useEffect(() => {
+        setIdUnico(generarIdUnico())
+        setUrlRaiz(window.location.origin)
         getRandomCardData()
     }, []);
     return (
