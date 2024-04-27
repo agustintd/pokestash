@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 export default function Sets() {
     const [cardinfo, setCardinfo] = useState(["none","none","none", "none"]);
-    const pokeids = ["base2","sv4","sv4pt5"];
+    const pokeids = ["base2","sv4","sv4pt5","ex7","sm115"];
     const randomIndex = Math.floor(Math.random() * pokeids.length);
     const randomId = pokeids[randomIndex]; 
     function getRandomCardData() {
@@ -35,12 +35,12 @@ export default function Sets() {
     }, []);
     return (
         <div className='set-container'>
-            <div style={setBg} id="img1" className='h-[300px] w-[200px] bg-black text-white'></div>
-            <div className='topDiplay'>
+            <img  src={cardinfo[1]} id="img1" className='h-[100px] w-[200px]  text-white'></img>
+            <div className='topDiplay centerxy'>
                 <h1 className=''>{cardinfo[0]}</h1>
             </div>
-            <div className='bottom-diplay'>
-                <span className='set-date'> {cardinfo[2]}</span>
+            <div className='bottom-diplay centerxy'>
+                <span className='set-date'> Release {cardinfo[2]}</span>
             </div>
         </div>
     );

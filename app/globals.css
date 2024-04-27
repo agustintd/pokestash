@@ -26,6 +26,11 @@
   justify-content: center;
 }
 
+.centerx{
+  display: flex;
+  justify-content: center;
+}
+
 .mcolor{
   background-color: #121212;
 }
