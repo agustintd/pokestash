@@ -61,3 +61,26 @@
   height: 50px;
   animation: loading 1.5s infinite linear;
 }
+
+.sbpc {
+  flex-direction: column;
+  background-color: #707070;
+  overflow: hidden;
+  animation: pulse 1.5s infinite;
+}
+
+.sipc {
+  background-color: #494949;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
