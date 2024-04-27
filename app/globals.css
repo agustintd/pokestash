@@ -16,8 +16,53 @@
   }
 }
 
+*{
+  color: #fff;
+}
+
 .centerxy{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.centerx{
+  display: flex;
+  justify-content: center;
+}
+
+.mcolor{
+  background-color: #121212;
+}
+.scolor{
+  background-color: #212121;
+}
+.s2color{
+  background-color: #1D1D1D;
+}
+.excolor{
+  background-color: yellow;
+}
+
+
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: none;
+  border: 6px solid red;
+  border-radius: 100%;
+  border-top-color: #1D1D1D;
+  border-bottom-color: #1D1D1D;
+  width: 50px;
+  height: 50px;
+  animation: loading 1.5s infinite linear;
 }
