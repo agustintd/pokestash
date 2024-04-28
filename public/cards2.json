@@ -1,0 +1,35 @@
+{
+    "data": [
+        {
+        "id": "hgss4-1",
+        "name": "Aggron",
+        "number": "1",
+        "images": {
+            "small": "https://images.pokemontcg.io/hgss4/1.png",
+            "large": "https://images.pokemontcg.io/hgss4/1_hires.png"
+        },
+        "cardmarket": {
+            "url": "https://prices.pokemontcg.io/cardmarket/hgss4-1",
+            "updatedAt": "2024/04/22",
+            "prices": {
+                "trendPrice": 3.26
+            }
+        }
+    },
+    { 
+        "id": "xy5-1",
+        "name": "Weedle",
+        "number": "1",
+        "images": {
+            "small": "https://images.pokemontcg.io/xy5/1.png",
+            "large": "https://images.pokemontcg.io/xy5/1_hires.png"
+        },
+        "cardmarket": {
+            "url": "https://prices.pokemontcg.io/cardmarket/xy5-1",
+            "updatedAt": "2024/04/22",
+            "prices": {
+                "trendPrice": 0.06
+            }
+        }
+    }
+]}
