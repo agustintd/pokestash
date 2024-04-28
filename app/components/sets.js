@@ -44,12 +44,12 @@ export default function Sets({setsid}) {
         </div>
     );
 }*/
-
+import Link from "next/link";
 export default function Sets({riot}){
-    console.log(riot)
+
     return(
         <div className='set-container'>
-        <img  src={riot.images.logo} id="img1" className='h-[85px] w-[175px]  text-white'></img>
+        <Link href="/[id]" as={`/${riot.name}`}><img  src={riot.images.logo} id="img1" className='h-[85px] w-[175px]  text-white'></img></Link>
         <div className='topDiplay centerxy'>
             <h1 className=''>{riot.name}</h1>
         </div>

@@ -1,4 +1,5 @@
 "use client"
+
 import Nav from "@/app/components/nav";
 import Footer from "@/app/components/footer";
 import Body from "@/app/components/body";
@@ -17,8 +18,7 @@ export default function Home({ children }) {
                 return response.json();
             })
             .then((data) => {
-                console.log(data)
-                console.log(Object.values(data))
+                
                 setCardinfo(data);
                 setCargando(false);
             })
@@ -36,19 +36,24 @@ export default function Home({ children }) {
     }, []);
 
     return (
-        <main className="flex min-h-screen bg-red flex-col items-center justify-center  mcolor ">
+        <main className="flex min-h-screen bg-red flex-col items-center justify-center mcolor">
             <Nav></Nav>
             <Body>
-                <CardGroup>
+                <div className="w-[100%]">
+                    <div className=" centerxy mt-[15px] w-[80%] h-[35px] mcolor m-[auto] border border-black mb-[20px]   ">
+                    <h1 className="text-2xl">Pokemon Card Sets</h1>
+                    </div>
+                    <CardGroup>
 
-                {cargando ? (
-                    <p> Cargando...</p>
-                    ) : (
-                    cardinfo.data.map((item, index) => (
-                        <Sets riot={item} key={index} />
-                    ))
-                    )}
-                </CardGroup>
+                    {cargando ? (
+                        <p> Cargando...</p>
+                        ) : (
+                        cardinfo.data.slice(151,158).map((item, index) => (
+                            <Sets riot={item} key={index} />
+                        ))
+                        )}
+                    </CardGroup>
+                </div>
             </Body>
             <Footer></Footer>
         </main>
