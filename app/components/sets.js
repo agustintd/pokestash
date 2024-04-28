@@ -1,13 +1,10 @@
-"use client"
+/*"use client"
 import { useState, useEffect } from 'react';
-export default function Sets() {
+export default function Sets({setsid}) {
     const [cardinfo, setCardinfo] = useState(["none","none","none", "none"]);
-    const [urlRaiz, setUrlRaiz] = useState('');
-    const pokeids = ["base2","ecard2"];
-    const randomIndex = Math.floor(Math.random() * pokeids.length);
-    const randomId = pokeids[randomIndex]; 
+   // const pokeids = ["base2","ecard2"];
     function getRandomCardData() {
-        fetch(urlRaiz+"/pokemon/extracto.json")
+        fetch(urlRaiz+"/pokemon/sets.json")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -15,7 +12,7 @@ export default function Sets() {
                 return response.json();
             })
             .then((data) => {
-                let card = data.data.find(data => data.id === randomId)
+                let card = data.data.find(data => data.id === setsid)
                 if (!card) {
                     console.log(null);
                 }
@@ -46,4 +43,19 @@ export default function Sets() {
             </div>
         </div>
     );
+}*/
+
+export default function Sets({riot}){
+    console.log(riot)
+    return(
+        <div className='set-container'>
+        <img  src={riot.images.logo} id="img1" className='h-[85px] w-[175px]  text-white'></img>
+        <div className='topDiplay centerxy'>
+            <h1 className=''>{riot.name}</h1>
+        </div>
+        <div className='bottom-diplay centerxy'>
+            <span className='set-date'> Release {riot.releaseDate}</span>
+        </div>
+    </div>
+    )
 }

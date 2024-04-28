@@ -1,12 +1,12 @@
 "use client"
-import { pokeids } from './pokeids';
+//import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
 import CardSkeleton from './cardskeleton';
 export default function Card() {
     const [imgLoaded, setImgLoaded] = useState(false);
     const [urlRaiz, setUrlRaiz] = useState('');
     const [idUnico, setIdUnico] = useState('');
-    //const pokeids = ["hgss4-1", "xy5-1"];
+    const pokeids = ["hgss4-1", "xy5-1"];
     const [cardinfo, setCardinfo] = useState(["none","none","none", "none"]);
     const [displayValue, setDisplayValue] = useState("block");
     const randomIndex = Math.floor(Math.random() * pokeids.length);
