@@ -1,5 +1,5 @@
 "use client"
-//import { pokeids } from './pokeids';
+////import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
 import CardSkeleton from './cardskeleton';
 import TextSkeleton from './textskeleton';
