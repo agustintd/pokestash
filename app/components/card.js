@@ -1,13 +1,12 @@
 "use client"
-////import { pokeids } from './pokeids';
+import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
 import CardSkeleton from './cardskeleton';
 import TextSkeleton from './textskeleton';
 export default function Card() {
     const [imgLoaded, setImgLoaded] = useState(false);
-    const [urlRaiz, setUrlRaiz] = useState('');
     const [idUnico, setIdUnico] = useState('');
-    const pokeids = ["hgss4-1", "xy5-1"];
+    //const pokeids = ["hgss4-1", "xy5-1"];
     const [cardinfo, setCardinfo] = useState(["-","-","-","-"]);
     const [displayValue, setDisplayValue] = useState("flex");
     const randomIndex = Math.floor(Math.random() * pokeids.length);
@@ -25,7 +24,7 @@ export default function Card() {
     
 
     function getRandomCardData() {
-        fetch(urlRaiz+"/pokemon/cards.json")
+        fetch("/cards.json")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -51,7 +50,6 @@ export default function Card() {
 
     useEffect(() => {
         setIdUnico(generarIdUnico())
-        setUrlRaiz(window.location.origin)
         getRandomCardData()
     }, []);
     return (

@@ -10,7 +10,7 @@ export default function Home({ children }) {
     const [cardinfo, setCardinfo] = useState([]);
     const [cargando, setCargando] = useState(true);
     function getRandomCardData() {
-        fetch("/pokemon/sets.json")
+        fetch("/sets.json")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -23,12 +23,6 @@ export default function Home({ children }) {
                 setCargando(false);
             })
     }
-    
-    /*const setBg = {
-        backgroundImage: `url(${cardinfo[1]})`,
-        backgroundSize: 'auto',
-        backgroundPosition: 'center'
-    };*/
 
     useEffect(() => {
     
@@ -48,8 +42,8 @@ export default function Home({ children }) {
                     {cargando ? (
                         <p> Cargando...</p>
                         ) : (
-                        cardinfo.data.slice(151,158).map((item, index) => (
-                            <Sets riot={item} key={index} />
+                        cardinfo.data.slice(0,159).map((data, index) => (
+                            <Sets setdata={data} key={index} />
                         ))
                         )}
                     </CardGroup>

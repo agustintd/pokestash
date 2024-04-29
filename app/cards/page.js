@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 export default function Home({ children }) {
     const [cards, setCards] = useState([]);
     function getRandomCardData() {
-        fetch("/pokemon/cards.json")
+        fetch("/cards.json")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
