@@ -39,9 +39,12 @@ useEffect(() => {
 
               </div>
               <CardGroup>
-                <CardRandom></CardRandom>
-                <CardRandom></CardRandom>
-                <CardRandom></CardRandom>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
+                <Card></Card>
               </CardGroup>
             </Body>
             <Footer></Footer>
