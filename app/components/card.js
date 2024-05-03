@@ -16,9 +16,9 @@ export default function Card({id, data}) {
         let imageUrl = data.images?.small || "";
         let price = data.cardmarket?.prices?.trendPrice || "";
         price = (price != "") ? " $"+price : "";
-        let id = data.id || "";
+        let number = data.number || "";
     
-        setCardinfo([name, imageUrl, price, id]);
+        setCardinfo([name, imageUrl, price, number]);
     }, []);
 
     return (

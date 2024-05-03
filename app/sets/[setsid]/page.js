@@ -9,17 +9,9 @@ export async function generateStaticParams() {
     }));
 }
 
-
-
 export default function Page({ params }) {
-    const setsid = params.setsid
-    console.log(params)
     return (
-            
         <Setslayout params={params} />
     )
 }
-
-
-
 // agregar en 404 funcion que tome urlprevia la revise si esta en lowercase y si no que la redirija a la pag con lowercase
