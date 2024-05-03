@@ -1,5 +1,6 @@
 import Setslayout from "./setslayout";
 import { filtrarString } from "@/app/functions/fetch";
+
 export async function generateStaticParams() {
     const sets = await fetch(`${process.env.NEXT_PUBLIC_DOMINIO}`+"/sets.json").then((data) => {return data.json();})
 
@@ -14,6 +15,7 @@ export default function Page({ params }) {
     const setsid = params.setsid
     console.log(params)
     return (
+            
         <Setslayout params={params} />
     )
 }
