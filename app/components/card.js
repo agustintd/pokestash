@@ -1,62 +1,31 @@
 "use client"
-import { pokeids } from './pokeids';
+//import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
 import CardSkeleton from './cardskeleton';
 import TextSkeleton from './textskeleton';
-export default function Card() {
-    const [imgLoaded, setImgLoaded] = useState(false);
-    const [idUnico, setIdUnico] = useState('');
-    //const pokeids = ["hgss4-1", "xy5-1"];
-    const [cardinfo, setCardinfo] = useState(["-","-","-","-"]);
+export default function Card({id, data}) {
+    const [cardinfo, setCardinfo] = useState(["","","",""]);
     const [displayValue, setDisplayValue] = useState("flex");
-    const randomIndex = Math.floor(Math.random() * pokeids.length);
-    const randomId = pokeids[randomIndex]; 
-    function generarIdUnico() {
-        let cardId = localStorage.getItem('cardId');
-        if (!cardId) {
-            cardId = 1;
-        } else {
-            cardId = parseInt(cardId) + 1;
-        }
-        localStorage.setItem('cardId', cardId);
-        return cardId.toString();
-    }
-    
-
-    function getRandomCardData() {
-        fetch("/cards.json")
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then((data) => {
-                let card = data.data.find(data => data.id === randomId)
-                if (!card) {
-                    console.log(null);
-                }
-                const { name, images, cardmarket } = card;
-                const trendPrice = cardmarket?.prices?.trendPrice || "???";
-                const { small } = images;
-                setCardinfo([name, small, "$"+trendPrice, randomId]);
-            })
-    }
 
     function handleImageLoaded(){
         setDisplayValue("none");
-        document.getElementById(idUnico).removeAttribute('style');
+        document.getElementById(id+"img").removeAttribute('style');
     }
-
     useEffect(() => {
-        setIdUnico(generarIdUnico())
-        getRandomCardData()
+        let name = data.name || "";
+        let imageUrl = data.images?.small || "";
+        let price = data.cardmarket?.prices?.trendPrice || "";
+        price = (price != "") ? " $"+price : "";
+        let id = data.id || "";
+    
+        setCardinfo([name, imageUrl, price, id]);
     }, []);
+
     return (
         <div className='card-container'>
             <div className='centerxy h-[279px] w-[200px]'>
-                <CardSkeleton style={displayValue} id={idUnico+"l"}></CardSkeleton>
-                <img style={{display: "none"}} src={cardinfo[1]} id={idUnico} className='h-[279px] w-[200px] text-white' onLoad={handleImageLoaded}></img>
+            <CardSkeleton style={displayValue}></CardSkeleton>
+            <img style={{display: "none"}} src={cardinfo[1]} id={id+"img"} className='h-[279px] w-[200px] text-white' onLoad={handleImageLoaded}></img>
             </div>
 
             <div className='topDiplay '>
@@ -66,7 +35,7 @@ export default function Card() {
                 
                 <span className='cardNumber'>{cardinfo[3]}</span>
 
-                <span className='cardPrice'> {cardinfo[2]}</span>
+                <span className='cardPrice text-yellow-500'>{cardinfo[2]}</span>
             </div>
         </div>
     );

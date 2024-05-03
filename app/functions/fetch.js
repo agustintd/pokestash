@@ -28,3 +28,31 @@ export function filtrarString(texto) {
     texto = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     return texto.replace(/[&—: ]/g, "").replace(/_/g, "").toLowerCase();
 }
+
+export function crearArrayAleatorio(array, cantidad) {
+    if (cantidad > array.length) {
+        throw new Error("La cantidad de elementos solicitada es mayor que la longitud del array.");
+    }
+    let newArray = [];
+    let indicesUtilizados = [];
+    for (let i = 0; i < cantidad; i++) {
+        let indiceAleatorio = Math.floor(Math.random() * array.length);
+        while (indicesUtilizados.includes(indiceAleatorio)) {
+            indiceAleatorio = Math.floor(Math.random() * array.length);
+        }
+        newArray.push(array[indiceAleatorio]);
+        indicesUtilizados.push(indiceAleatorio);
+    }
+    return newArray;
+}
+
+export function crearArrayVacio(cantidad) {
+    if (cantidad <= 1) {
+        return [["", "", "", ""]];
+    }
+    const arrays = [];
+    for (let i = 0; i < cantidad; i++) {
+        arrays.push(["", "", "", ""]);
+    }
+    return arrays;
+}

@@ -4,7 +4,7 @@ import Nav from "@/app/components/nav";
 import Footer from "@/app/components/footer";
 import Body from "@/app/components/body";
 import CardGroup from "@/app/components/cardgroup";
-import Sets from "@/app/components/sets";
+import Set from "@/app/components/set";
 import { useState, useEffect } from 'react';
 export default function Home({ children }) {
     const [cardinfo, setCardinfo] = useState([]);
@@ -43,7 +43,7 @@ export default function Home({ children }) {
                         <p> Cargando...</p>
                         ) : (
                         cardinfo.data.slice(0,159).map((data, index) => (
-                            <Sets setdata={data} key={index} />
+                            <Set setdata={data} key={index} />
                         ))
                         )}
                     </CardGroup>

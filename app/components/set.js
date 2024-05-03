@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { filtrarString } from "@/app/functions/fetch";
-export default function Sets({setdata}){
+export default function Set({setdata}){
     const nameset = filtrarString(setdata.name);
 
     return(
