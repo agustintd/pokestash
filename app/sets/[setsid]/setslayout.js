@@ -7,6 +7,7 @@ import CardGroup from "@/app/components/cardgroup";
 import Card from "@/app/components/card";
 import { useState, useEffect } from 'react';
 import {fetchJSON } from "@/app/functions/fetch";
+import CardRandom from "@/app/components/cardRandom";
 
 export default function Setslayout({params}) {
   const [Infoset, setInfoset] = useState('');
@@ -38,12 +39,9 @@ useEffect(() => {
 
               </div>
               <CardGroup>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                <CardRandom></CardRandom>
+                <CardRandom></CardRandom>
+                <CardRandom></CardRandom>
               </CardGroup>
             </Body>
             <Footer></Footer>
