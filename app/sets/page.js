@@ -42,7 +42,7 @@ export default function Home({ children }) {
                     {cargando ? (
                         <p> Cargando...</p>
                         ) : (
-                        cardinfo.data.slice(0,159).map((data, index) => (
+                        cardinfo.data.slice(0,159).reverse().map((data, index) => (
                             <Set setdata={data} key={index} />
                         ))
                         )}

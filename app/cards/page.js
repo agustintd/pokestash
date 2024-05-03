@@ -30,7 +30,7 @@ export default function Home({ children }) {
             <Body>
                 <CardGroup>
                 {cards.slice(0,500).map((cardinfo, index) => (
-                    <Card id={index} data={cardinfo}/>
+                    <Card id={index} data={cardinfo} key={index}/>
                 ))}
                 </CardGroup>
             </Body>

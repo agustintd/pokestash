@@ -36,10 +36,10 @@ export default function CardRandom() {
                 if (!card) {
                     console.log(null);
                 }
-                const { name, images, cardmarket } = card;
+                const { name, images, cardmarket, number } = card;
                 const trendPrice = cardmarket?.prices?.trendPrice || "???";
                 const { small } = images;
-                setCardinfo([name, small, "$"+trendPrice, randomId]);
+                setCardinfo([name, small, "$"+trendPrice, number]);
             })
     }
 
@@ -66,7 +66,7 @@ export default function CardRandom() {
                 
                 <span className='cardNumber'>{cardinfo[3]}</span>
 
-                <span className='cardPrice'> {cardinfo[2]}</span>
+                <span className='cardPrice text-green-300'> {cardinfo[2]}</span>
             </div>
         </div>
     );
