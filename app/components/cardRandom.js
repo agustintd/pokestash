@@ -7,7 +7,7 @@ export default function CardRandom() {
     const [imgLoaded, setImgLoaded] = useState(false);
     const [idUnico, setIdUnico] = useState('');
     //const pokeids = ["hgss4-1", "xy5-1"];
-    const [cardinfo, setCardinfo] = useState(["-","-","-","-"]);
+    const [cardinfo, setCardinfo] = useState(["","","",""]);
     const [displayValue, setDisplayValue] = useState("flex");
     const randomIndex = Math.floor(Math.random() * pokeids.length);
     const randomId = pokeids[randomIndex]; 
