@@ -8,6 +8,7 @@ export default function Nav() {
                 <div className=""> <Link href="/"><p> Logo</p></Link> </div>
                 <div className=""> <Link href="/sets"><p> SETS </p></Link></div>
                 <div className=""> <Link href="/cards"><p> CARDS </p></Link></div>
+                <div className=""> <Link href="/codes"><p> CODES </p></Link></div>
                 <div className=""> <p> BUSQUEDA </p></div>
             </div>
         </div>

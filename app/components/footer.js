@@ -12,7 +12,7 @@ export default function Footer() {
                 </div>
                 <div className="max-w-[500px] mt-[10px]">
                     <p>Disclaimer</p>
-                    <p className="text-xs	">All information presented on this website regarding the Pokémon Trading Card Game is © The Pokémon Company, Nintendo and/or Game Freak. This website is not produced by, endorsed by, supported by, or affiliated with Pokémon, Nintendo or Game Freak.</p>
+                    <p className="text-xs	"></p>
                 </div>
             </div>
         </footer>
