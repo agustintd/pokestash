@@ -10,7 +10,7 @@ import { crearArrayAleatorio, fetchJSON, crearArrayVacio } from "./functions/fet
 import { pokeids } from './components/pokeids';
 
 export default function Home({ children }) {
-    const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState(crearArrayVacio(12));
     useEffect(() => {
         fetchJSON("card", crearArrayAleatorio(pokeids, 12), "id")
             .then(rsp => {

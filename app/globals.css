@@ -6,6 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
+  --price-low: 0, 126, 42;
+  --price-mid: 13, 245, 90;
+  --price-good: 189, 231, 0;
+  --price-epic: 255, 251, 0;
+  --price-god: 177, 56, 0;
+  --price-legend: 255, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,34 +23,46 @@
   }
 }
 
-*{
+* {
   color: #fff;
 }
 
-.centerxy{
+.centerxy {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(0, 126, 42);
+  color: rgb(13, 245, 90);
+  color: rgb(189, 231, 0);
+  color: rgb(255, 251, 0);
+  color: rgb(177, 56, 0);
+  color: rgb(255, 0, 0);
 }
 
-.centerx{
+.centerx {
   display: flex;
   justify-content: center;
 }
 
-.mcolor{
+.mcolor {
   background-color: #121212;
 }
-.scolor{
+
+.scolor {
   background-color: #212121;
 }
-.s2color{
+
+.s2color {
   background-color: #1D1D1D;
 }
-.excolor{
+
+.excolor {
   background-color: yellow;
 }
 
+.transition-smooth{
+  transition: color 0s;
+}
 
 
 @keyframes loading {
@@ -82,9 +101,11 @@
   0% {
     opacity: 0.1;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 0.1;
   }
