@@ -6,7 +6,7 @@ import Body from "@/app/components/body";
 import CardGroup from "@/app/components/cardgroup";
 import Set from "@/app/components/set";
 import { useState, useEffect } from 'react';
-export default function Home({ children }) {
+export default function SetsPage({ children }) {
     const [cardinfo, setCardinfo] = useState([]);
     const [cargando, setCargando] = useState(true);
     function getRandomCardData() {

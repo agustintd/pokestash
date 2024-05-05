@@ -7,7 +7,7 @@ import CardGroup from "@/app/components/cardgroup";
 import Card from "@/app/components/card";
 import { crearArrayVacio } from "../functions/fetch";
 import { useState, useEffect } from 'react';
-export default function Home({ children }) {
+export default function CardsPage({ children }) {
     const [cards, setCards] = useState(crearArrayVacio(12));
     const [loadedcards, setLoadedCards] = useState(12);
     function getCardsData() {
