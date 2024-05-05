@@ -11,14 +11,16 @@ import Product from "../components/product";
 
 export default function CodesPage() {
     return (
-        <main className="flex min-h-screen bg-red flex-col items-center justify-center  mcolor">
+        <main className="flex min-h-screen  flex-col items-center justify-center  mcolor">
             <Nav></Nav>
             <Body>
-                <div className="h-[auto]">
-                    <div className="centerxy mt-[15px] "> CODIGOS</div>
-                    {data.products.map((product) => (
-                        <Product key={product.slug} product={product} />
+                <div className="h-[700px]">
+                    <div className="centerxy mt-[15px] ">CODIGOS</div>
+                    <div className="flex flex-row place-content-evenly h-[75%]">
+                    {data.products.map((product, index) => (
+                        <Product key={index} product={product} />
                     ))}
+                    </div>
                 </div>
             </Body>
             <Footer></Footer>
