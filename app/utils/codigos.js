@@ -9,7 +9,7 @@ const data = {
       },
       {
         name: "Paldean Fates",
-        slug: "paldean-fates",
+        slug: "temporal-forces",
         image: "https://tcg.pokemon.com/assets/img/sv-expansions/temporal-forces/logo/es-es/sv5-logo.png",
         price: 0.20,
         countInStock: 9,
