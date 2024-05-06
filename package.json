@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "next": "14.2.1",
     "pokemontcgsdk": "^2.0.0",
     "react": "^18",

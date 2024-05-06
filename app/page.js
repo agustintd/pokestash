@@ -5,6 +5,7 @@ import Body from "@/app/components/body";
 import CardGroup from "@/app/components/cardgroup";
 import Card from "@/app/components/card";
 import CardRandom from "@/app/components/cardRandom";
+import CardShiny from "@/app/components/cardshiny";
 import { useState, useEffect } from 'react';
 import { crearArrayAleatorio, fetchJSON, crearArrayVacio } from "@/app/functions/fetch";
 import { pokeids } from '@/app/components/pokeids';
@@ -23,11 +24,12 @@ export default function HomePage({ children }) {
             <Body>
                 <CardGroup>
                     {cards.map((cardinfo, index) => (
-                        <Card id={index} key={index} data={cardinfo} />
+                        <CardShiny id={index} key={index} data={cardinfo} />
                     ))}
                 </CardGroup>
             </Body>
             <Footer></Footer>
+            <style className="hover"></style>
         </main>
     );
 }
