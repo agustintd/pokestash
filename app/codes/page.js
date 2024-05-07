@@ -18,7 +18,7 @@ export default function CodesPage() {
                     <div className="centerxy mt-[15px] ">CODIGOS</div>
                     <div className="flex flex-row place-content-evenly h-[75%]">
                     {data.products.map((product, index) => (
-                        <Product key={index} product={product} />
+                        <Product key={product.slug} product={product} />
                     ))}
                     </div>
                 </div>

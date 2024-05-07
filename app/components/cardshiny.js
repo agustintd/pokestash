@@ -100,7 +100,7 @@ export default function CardShiny({ id, data }) {
         <div className='card-container'>
             <div className='centerxy h-[279px] w-[200px]'>
                 <CardSkeleton style={displayValue}></CardSkeleton>
-                <div style={cardStyle} id={id + "img"} className={cardAnimation ? `spcard animated h-[279px] w-[200px] rounded-[8px]` : 'h-[279px] w-[200px] rounded-[8px]'} />
+                <div style={cardStyle} id={id + "img"} className={cardAnimation ? `spcard animated h-[279px] w-[200px] rounded-[8px]` : 'h-[279px] w-[200px] rounded-[8px] spcard animated'} />
             </div>
             <div className='topDiplay '>
                 <h1 className='cardName'>{cardinfo[0]}</h1>
