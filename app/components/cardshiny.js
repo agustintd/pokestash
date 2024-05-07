@@ -29,35 +29,33 @@ export default function CardShiny({ id, data }) {
         transition: 'color ' + transitionTime
     }
 
-    function handleImageLoaded() {
-        setTimeout(() => {
-            setDisplayValue("none");
-        }, 1000);
-    }
-
-    function decorCardPrice(name,price) {
+    function decorCardPrice(price) {
         price = Math.floor(price);
         setColorPrice("rgb(var(--price-low))")
         setCardAnimation(false);
         setRainbowText(false);
-        if (price >= 0.99) {
-            setColorPrice("rgb(var(--price-mid))");
-        }
-        if (price > 4) {
-            setColorPrice("rgb(var(--price-good))");
-        }
-        if (price > 9) {
-            setColorPrice("rgb(var(--price-epic))");
-        }
-        if (price > 20) {
-            setColorPrice("rgb(var(--price-god))");
-        }
         if (price > 40) {
             setColorPrice("rgb(var(--price-legend))");
             setCardAnimation(true);
             setRainbowText(true);
-            console.log("price: "+price+" / name: "+name)
+            return;
         }
+        if (price > 20) {
+            setColorPrice("rgb(var(--price-god))");
+            return;
+        }
+        if (price > 9) {
+            setColorPrice("rgb(var(--price-epic))");
+            return;
+        }
+        if (price > 4) {
+            setColorPrice("rgb(var(--price-good))");
+            return;
+        }
+        if (price >= 0.99) {
+            setColorPrice("rgb(var(--price-mid))");
+            return;
+        }    
     }
     const efectStyle = {
         display: 'inline',
@@ -69,7 +67,7 @@ export default function CardShiny({ id, data }) {
         let name = data.name || "";
         let imageUrl = data.images?.small || "";
         let price = data.cardmarket?.prices?.trendPrice || "";
-        decorCardPrice(name,price)
+        decorCardPrice(price)
         price = (price != "") ? " $" + price : "";
         let number = data.number || "";
         setCardinfo([name, imageUrl, price, number]);
