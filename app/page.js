@@ -11,7 +11,6 @@ import { crearArrayAleatorio, fetchJSON, crearArrayVacio } from "@/app/functions
 import { pokeids } from '@/app/components/pokeids';
 
 export default function HomePage({ children }) {
-    const nigelf = ""
     const [cards, setCards] = useState(crearArrayVacio(12));
     useEffect(() => {
         fetchJSON("card", crearArrayAleatorio(pokeids, 12), "id")

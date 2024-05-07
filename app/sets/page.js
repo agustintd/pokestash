@@ -5,10 +5,14 @@ import Footer from "@/app/components/footer";
 import Body from "@/app/components/body";
 import CardGroup from "@/app/components/cardgroup";
 import Set from "@/app/components/set";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { CartContext } from '../context/ShoppingCartContext';
+
 export default function SetsPage({ children }) {
     const [cardinfo, setCardinfo] = useState([]);
     const [cargando, setCargando] = useState(true);
+    const [cart, setCart] = useContext(CartContext)
+    console.log(cart)
     function getRandomCardData() {
         fetch("/sets.json")
             .then((response) => {
