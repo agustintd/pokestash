@@ -28,6 +28,13 @@ const data = {
         price: 1,
         countInStock: 1,
       },
+      {
+        name: "Ancient Roar Booster",
+        slug: "ancient-roar-booster",
+        image: "https://tcg.pokemon.com/assets/img/sv-expansions/temporal-forces/logo/es-es/sv5-logo.png",
+        price: 2300,
+        countInStock: 10,
+      },
     ],
   };
   
