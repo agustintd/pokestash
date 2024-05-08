@@ -14,6 +14,9 @@ export default function Footer() {
                     <p>Disclaimer</p>
                     <p className="text-xs	"></p>
                 </div>
+                <div>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=GG6938GJSHJXN">Donate :)</a>
+                </div>
             </div>
         </footer>
     );

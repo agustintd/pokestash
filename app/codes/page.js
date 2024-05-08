@@ -16,7 +16,8 @@ export default function CodesPage() {
             <Nav></Nav>
             <Body>
                 <div className="h-[700px]">
-                    <div className="centerxy mt-[15px] ">CODIGOS</div>
+                    <div className="centerxy mt-[15px] "><h1>CODES</h1></div>
+                    <div className="centerxy"><h2>prices are in ARS currency</h2></div>
                     <div className="flex flex-row place-content-evenly h-[75%]">
                         {data.products.map((product, index) => (
                             <Product key={product.slug} product={product} />
