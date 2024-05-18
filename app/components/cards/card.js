@@ -1,8 +1,8 @@
 "use client"
 //import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
-import CardSkeleton from './cardskeleton';
-import TextSkeleton from './textskeleton';
+import CardSkeleton from '@/app/components/skeletons/cardskeleton';
+
 export default function Card({ id, data }) {
     const [colorIndex, setColorIndex] = useState(0);
     const [cardinfo, setCardinfo] = useState(["", "", "", ""]);

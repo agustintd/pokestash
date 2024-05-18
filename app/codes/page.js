@@ -1,13 +1,13 @@
 "use client"
-import Nav from "@/app/components/nav";
-import Footer from "@/app/components/footer";
-import Body from "@/app/components/body";
-import CardGroup from "@/app/components/cardgroup";
-import Card from "@/app/components/card";
+import Nav from "@/app/components/layout/nav";
+import Footer from "@/app/components/layout/footer";
+import Body from "@/app/components/layout/body";
+import CardGroup from "@/app/components/cards/cardgroup";
+import Card from "@/app/components/cards/card";
 import { useState, useEffect, useContext } from 'react';
-import data from "../utils/codigos";
-import Product from "../components/product";
-import { CartContext } from "../context/ShoppingCartContext";
+import data from "@/app/utils/codigos";
+import Product from "@/app/components/products/product";
+import { CartContext } from "@/app/context/ShoppingCartContext";
 
 export default function CodesPage() {
     const [cart, setCart] = useContext(CartContext)

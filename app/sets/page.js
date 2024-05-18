@@ -1,12 +1,12 @@
 "use client"
 
-import Nav from "@/app/components/nav";
-import Footer from "@/app/components/footer";
-import Body from "@/app/components/body";
-import CardGroup from "@/app/components/cardgroup";
-import Set from "@/app/components/set";
+import Nav from "@/app/components/layout/nav";
+import Footer from "@/app/components/layout/footer";
+import Body from "@/app/components/layout/body";
+import CardGroup from "@/app/components/cards/cardgroup";
+import Set from "@/app/components/sets/set";
 import { useState, useEffect, useContext } from 'react';
-import { CartContext } from '../context/ShoppingCartContext';
+import { CartContext } from '@/app/context/ShoppingCartContext';
 
 export default function SetsPage({ children }) {
     const [cardinfo, setCardinfo] = useState([]);

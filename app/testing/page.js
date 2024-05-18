@@ -1,13 +1,13 @@
 "use client"
-import Nav from "@/app/components/nav";
-import Footer from "@/app/components/footer";
-import Body from "@/app/components/body";
-import CardGroup from "@/app/components/cardgroup";
-import Card from "@/app/components/card";
-import CardRandom from "@/app/components/cardRandom";
+import Nav from "@/app/components/layout/nav";
+import Footer from "@/app/components/layout/footer";
+import Body from "@/app/components/layout/body";
+import CardGroup from "@/app/components/cards/cardgroup";
+import Card from "@/app/components/cards/card";
+import CardRandom from "@/app/components/cards/cardrandom";
 import { useState, useEffect } from 'react';
 import { crearArrayAleatorio, fetchJSON, crearArrayVacio } from "@/app/functions/fetch";
-import { pokeids } from '@/app/components/pokeids';
+import { pokeids } from '@/app/utils/cardsids';
 
 export default function HomePage({ children }) {
     const [cards, setCards] = useState(crearArrayVacio(12));

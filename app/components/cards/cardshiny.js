@@ -1,8 +1,7 @@
 "use client"
 //import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
-import CardSkeleton from './cardskeleton';
-import TextSkeleton from './textskeleton';
+import CardSkeleton from '@/app/components/skeletons/cardskeleton';
 import '@/public/css/effects.css';
 
 export default function CardShiny({ id, data }) {

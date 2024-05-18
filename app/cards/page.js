@@ -1,11 +1,11 @@
 "use client"
 
-import Nav from "@/app/components/nav";
-import Footer from "@/app/components/footer";
-import Body from "@/app/components/body";
-import CardGroup from "@/app/components/cardgroup";
-import Card from "@/app/components/card";
-import { crearArrayVacio } from "../functions/fetch";
+import Nav from "@/app/components/layout/nav";
+import Footer from "@/app/components/layout/footer";
+import Body from "@/app/components/layout/body";
+import CardGroup from "@/app/components/cards/cardgroup";
+import Card from "@/app/components/cards/card";
+import { crearArrayVacio } from "@/app/functions/fetch";
 import { useState, useEffect } from 'react';
 export default function CardsPage({ children }) {
     const [cards, setCards] = useState(crearArrayVacio(12));

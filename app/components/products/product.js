@@ -1,7 +1,7 @@
 "use client"
 import { useContext } from 'react';
 import { useState, useEffect } from 'react';
-import { CartContext } from '../context/ShoppingCartContext';
+import { CartContext } from '@/app/context/ShoppingCartContext';
 export default function Product({ product }) {
     const [inputValue, setInputValue] = useState(1);
     const [cart, setCart] = useContext(CartContext)

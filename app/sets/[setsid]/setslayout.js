@@ -1,13 +1,13 @@
 
 "use client"
-import Nav from "@/app/components/nav";
-import Footer from "@/app/components/footer";
-import Body from "@/app/components/body";
-import CardGroup from "@/app/components/cardgroup";
-import Card from "@/app/components/card";
+import Nav from "@/app/components/layout/nav";
+import Footer from "@/app/components/layout/footer";
+import Body from "@/app/components/layout/body";
+import CardGroup from "@/app/components/cards/cardgroup";
+import Card from "@/app/components/cards/card";
 import { useState, useEffect } from 'react';
 import { fetchJSON } from "@/app/functions/fetch";
-import CardRandom from "@/app/components/cardRandom";
+import CardRandom from "@/app/components/cards/cardrandom";
 
 export default function Setslayout({ params }) {
   const [infoSet, setInfoSet] = useState([]);
