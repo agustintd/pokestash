@@ -1,8 +1,8 @@
 "use client"
 import { pokeids } from '@/app/utils/cardsids';
 import { useState, useEffect } from 'react';
-import CardSkeleton from '@/app/skeletons/cardskeleton';
-import TextSkeleton from '@/app/skeletons/textskeleton';
+import CardSkeleton from '@/app/components/skeletons/cardskeleton';
+import TextSkeleton from '@/app/components/skeletons/textskeleton';
 export default function CardRandom() {
     const [imgLoaded, setImgLoaded] = useState(false);
     const [idUnico, setIdUnico] = useState('');

@@ -1,4 +1,4 @@
-import Setslayout from "./setslayout";
+import Setslayout from "@/app/sets/setslayout";
 import { filtrarString } from "@/app/functions/fetch";
 
 export async function generateStaticParams() {
