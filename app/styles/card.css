@@ -1,0 +1,13 @@
+
+.cont-precio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin: 5px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+}

@@ -2,7 +2,7 @@
 //import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
 import CardSkeleton from '@/app/components/skeletons/cardskeleton';
-import '@/public/css/effects.css';
+import '@/app/styles/effects.css';
 
 export default function CardShiny({ id, data }) {
     const [loaded, setLoaded] = useState(false);

@@ -2,6 +2,7 @@
 //import { pokeids } from './pokeids';
 import { useState, useEffect } from 'react';
 import CardSkeleton from '@/app/components/skeletons/cardskeleton';
+import TextSkeleton from '@/app/components/skeletons/textskeleton';
 
 export default function Card({ id, data }) {
     const [colorIndex, setColorIndex] = useState(0);
@@ -19,7 +20,8 @@ export default function Card({ id, data }) {
     }
     const priceStyle = {
         color: colorPrice,
-        transition: 'color '+transitionTime
+        transition: 'color '+transitionTime,
+        float: "right"
     }
 
     function handleImageLoaded() {
