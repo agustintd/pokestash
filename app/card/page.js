@@ -6,7 +6,7 @@ import Body from "@/app/components/layout/body";
 import { pokeids } from '@/app/utils/cardsids';
 import CardSkeleton from "@/app/components/skeletons/cardskeleton";
 import '@/app/styles/card.css';
-// borrar
+// borrar 2
 function CardPage() {
     const [cardinfo, setCardinfo] = useState({});
     const [loaded, setLoaded] = useState(false);
